@@ -37,7 +37,7 @@ module rgmii_rx(input idelay_clk,
     
     (* IDELAY_GROUP = "rgmii_rx_delay" *)
     IDELAYE2 # (
-    .IDELAT_TYPE("FIXED"),
+    .IDELAY_TYPE("FIXED"),
     .IDELAY_VALUE(IDELAY_VALUE),
     .REFCLK_FREQUENCY(200.0)
     )
@@ -56,7 +56,7 @@ module rgmii_rx(input idelay_clk,
     .REGRST(1'b0)
     );
     
-    IDDR2 #(
+    IDDR #(
     .DDR_CLK_EDGE("SAME_EDGE_PIPELINED"),
     .INIT_Q1(1'b0),
     .INIT_Q2(1'b0),
@@ -78,7 +78,7 @@ module rgmii_rx(input idelay_clk,
     begin : rxdata_bus
     (* IODELAY_GROUP = "rgmii_rx_delay" *)
     IDELAYE2 # (
-    .IDELAT_TYPE("FIXED"),
+    .IDELAY_TYPE("FIXED"),
     .IDELAY_VALUE(IDELAY_VALUE),
     .REFCLK_FREQUENCY(200.0)
     )
