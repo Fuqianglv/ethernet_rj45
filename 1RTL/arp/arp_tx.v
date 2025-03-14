@@ -268,10 +268,10 @@ module arp_tx(input clk,
                         gmii_txd <= {~crc_next[0],~crc_next[1],~crc_next[2],~crc_next[3],~crc_next[4],~crc_next[5],~crc_next[6],~crc_next[7]};
                     end
                     else if (cnt == 6'd1)begin
-                        gmii_txd <= {~crc_next[16],~crc_next[17],~crc_next[18],~crc_next[19],~crc_next[20],~crc_next[21],~crc_next[22],~crc_next[23]};
+                        gmii_txd <= {~crc_data[16],~crc_data[17],~crc_data[18],~crc_data[19],~crc_data[20],~crc_data[21],~crc_data[22],~crc_data[23]};
                     end
                     else if(cnt == 6'd2)begin
-                        gmii_txd <= {~crc_next[8],~crc_next[9],~crc_next[10],~crc_next[11],~crc_next[12],~crc_next[13],~crc_next[14],~crc_next[15]};
+                        gmii_txd <= {~crc_data[8],~crc_data[9],~crc_data[10],~crc_data[11],~crc_data[12],~crc_data[13],~crc_data[14],~crc_data[15]};
                     end
                     else if(cnt == 6'd3)begin
                         gmii_txd <= {~crc_data[0],~crc_data[1],~crc_data[2],~crc_data[3],~crc_data[4],~crc_data[5],~crc_data[6],~crc_data[7]};
