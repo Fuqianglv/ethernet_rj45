@@ -160,7 +160,7 @@ module eth_icmp_test(input sys_clk,
     );
     
     
-    eth_ctrl u_eth_ctrl(
+    eth_ctrl_icmp u_eth_ctrl(
     .clk             (gmii_rx_clk),
     .rst_n           (sys_rst_n),
     

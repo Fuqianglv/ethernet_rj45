@@ -1,5 +1,5 @@
 
-module eth_ctrl(input clk,
+module eth_ctrl_icmp(input clk,
                 input rst_n,
                 input arp_rx_done,
                 input arp_rx_type,
